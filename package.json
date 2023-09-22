@@ -1,0 +1,57 @@
+{
+  "name": "basics-boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Basics Boilerplate",
+  "scripts": {
+    "parcel:serve": "parcel serve src/index.html -p 8123 --open",
+    "parcel:build": "parcel build src/index.html --public-url ./ --dist-dir dist --no-source-maps --no-cache",
+    "clean": "rimraf dist .cache .cache-loader .parcel-cache",
+    "dev": "npm-run-all clean parcel:serve",
+    "build": "npm-run-all clean parcel:build",
+    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
+  },
+  "web": "dist/index.html",
+  "targets": {
+    "web": {
+      "context": "browser",
+      "publicUrl": "./",
+      "engines": {
+        "browsers": "last 2 versions, > 0.5%, not dead"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/mortensen/basics-boilerplate/src/master/"
+  },
+  "author": {
+    "name": "Mortensen",
+    "email": "hola@mortensen.cat"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://bitbucket.org/mortensen/basics-boilerplate/issues"
+  },
+  "homepage": "https://bitbucket.org/mortensen/basics-boilerplate/src/master/README.md",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@parcel/transformer-sass": "^2.2.0",
+    "autoprefixer": "^10.4.2",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.2.0",
+    "postcss": "^8.4.8",
+    "postcss-preset-env": "^7.3.1",
+    "posthtml-expressions": "^1.9.0",
+    "posthtml-extend": "^0.6.2",
+    "posthtml-include": "^1.7.2",
+    "posthtml-parser-title": "^0.1.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.43.4",
+    "sharp": "^0.29.3",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "swiper": "^8.4.7"
+  }
+}
